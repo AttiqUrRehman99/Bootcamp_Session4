@@ -12,7 +12,7 @@ function App() {
       <button onClick={() => setCount(++count)}> Update Counter </button>
 
       <hr />
-      <h3>Have a Good {isMoring ? "Morning" : "Night"} </h3>
+      <h3>Have a Good {isMoring ? "Morning" : "Night"} :) </h3>
       <button onClick={() => setMoring(!isMoring)}> Change Day Light </button>
     </div>
   );
