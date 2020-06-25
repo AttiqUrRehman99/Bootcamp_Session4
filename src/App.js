@@ -1,13 +1,19 @@
 import React, { useState } from "react";
+import Message from "./Message.js";
 import "./App.css";
 
 function App() {
   let [count, setCount] = useState(0);
+  let [isMoring, setMoring] = useState(true);
 
-  setCount(2);
   return (
-    <div className="App">
-      <h1>Hello World {count}</h1>
+    <div className={`box ${isMoring ? "daylight" : ""}`}>
+      <Message counter={count} />
+      <button onClick={() => setCount(++count)}> Update Counter </button>
+
+      <hr />
+      <h3>Have a Good {isMoring ? "Morning" : "Night"} </h3>
+      <button onClick={() => setMoring(!isMoring)}> Change Day Light </button>
     </div>
   );
 }
